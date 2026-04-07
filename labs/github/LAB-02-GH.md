@@ -64,6 +64,8 @@ Set your GitHub credentials as environment variables:
 export GITHUB_TOKEN="your_personal_access_token"
 ```
 
+![alt text](image-7.png)
+
 ### 3. Add Resource Configuration
 
 Open `main.tf` and add the following configuration (purposely not written in HCL canonical style).
@@ -111,11 +113,13 @@ Format your configuration to rewrite it to follow HCL style:
 ```bash
 terraform fmt
 ```
+![alt text](image-8.png)
 
 Validate the syntax:
 ```bash
 terraform validate
 ```
+![alt text](image-9.png)
 
 ### 5. Review the Plan
 
@@ -127,6 +131,8 @@ terraform plan
 The plan output will show that Terraform intends to create:
 - A new private repository with specified features
 - A branch protection rule requiring one review for the main branch
+
+![alt text](image-10.png)
 
 ### 6. Apply the Configuration
 
@@ -151,6 +157,8 @@ Let's verify our resources in the GitHub web interface:
 5. Navigate to Settings → Branches to verify:
    - The branch protection rule is applied to the main branch
    - Pull request reviews are required
+
+![alt text](image-11.png)
 
 ### 8. Update the Repository Settings
 
@@ -197,6 +205,8 @@ terraform apply
 
 Review the proposed changes and type `yes` when prompted to confirm.
 
+![alt text](image-12.png)
+
 ### 11. Update the Branch Protection
 
 In the `main.tf` file, update the branch protection configuration:
@@ -230,6 +240,8 @@ terraform apply
 ```
 
 Review the proposed changes and type `yes` when prompted to confirm.
+
+![alt text](image-13.png)
 
 ## Verification Steps
 

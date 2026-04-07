@@ -29,6 +29,8 @@ Determine your installed Terraform version:
 terraform version
 ```
 
+![alt text](image.png)
+
 Note this version number as you'll need it for the provider configuration.
 
 ### 2. Create the Project Structure
@@ -39,6 +41,7 @@ Create a labs directory and a terraform directory within it that will serve as y
 mkdir -p labs/github/terraform
 cd labs/github/terraform
 ```
+![alt text](image-1.png)
 
 Create the initial configuration files in this directory:
 
@@ -85,6 +88,7 @@ Run the following command to ensure consistent formatting:
 ```bash
 terraform fmt
 ```
+![alt text](image-2.png)
 
 Expected output: If any files were formatted, their names will be listed. If no formatting was needed, there will be no output.
 
@@ -108,6 +112,7 @@ If you'd like to know more about provider signing, you can read about it here:
 https://www.terraform.io/docs/cli/plugins/signing.html
 Terraform has created a lock file .terraform.lock.hcl to record the provider
 ```
+![alt text](image-3.png)
 
 ### 6. Validate the Configuration
 
@@ -121,6 +126,8 @@ Expected output:
 ```
 Success! The configuration is valid.
 ```
+
+![alt text](image-4.png)
 
 ### 7. Test Version Constraints
 
@@ -145,6 +152,7 @@ Error: Unsupported Terraform Core version
 This configuration requires Terraform version >= 99.0.0, but the current version
 is x.x.x. Please upgrade Terraform to a supported version.
 ```
+![alt text](image-5.png)
 
 3. Change the version requirement back to your current version:
 
@@ -159,6 +167,7 @@ terraform init
 ```
 
 Expected output: You should now see success messages indicating proper initialization.
+![alt text](image-6.png)
 
 ## Verification Steps
 

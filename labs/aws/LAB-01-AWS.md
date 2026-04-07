@@ -58,6 +58,7 @@ labs/
 ```
 
 This directory will be your working environment for the upcoming labs as we build our infrastructure incrementally.
+![alt text](image.png)
 
 
 ### 3. Configure the AWS Provider
@@ -90,6 +91,8 @@ terraform fmt
 
 Expected output: If any files were formatted, their names will be listed. If no formatting was needed, there will be no output.
 
+![alt text](image-1.png)
+
 ### 5. Initialize the Working Directory
  Initialize the working directory to prep the environment and download the provider:
 
@@ -111,6 +114,7 @@ you run "terraform init" in the future.
 
 Terraform has been successfully initialized!
 ```
+![alt text](image-2.png)
 
 ### 6. Validate the Configuration
 
@@ -124,6 +128,7 @@ Expected output:
 ```
 Success! The configuration is valid.
 ```
+![alt text](image-3.png)
 
 ### 7. Test Version Constraints
 
@@ -150,6 +155,7 @@ Initializing the backend...
 │   on providers.tf line 2, in terraform:
 │    2:   required_version = ">= 99.0.0" # Replace with your installed version
 ```
+![alt text](image-4.png)
 
 3. Change the version requirement back to your current version:
 
@@ -164,6 +170,8 @@ terraform init
 ```
 
 Expected output: You should now see success messages indicating proper initialization.
+
+![alt text](image-5.png)
 
 ## Verification Steps
 
@@ -186,6 +194,8 @@ labs/
    - AWS provider is listed in the lock file
    - No error messages are present from the validate command
    - All files are properly formatted
+
+![alt text](image-6.png)
 
 ## Clean Up
 

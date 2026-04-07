@@ -37,6 +37,8 @@ export AWS_ACCESS_KEY_ID="your_access_key"
 export AWS_SECRET_ACCESS_KEY="your_secret_key"
 ```
 
+![alt text](image-7.png)
+
 ### 3. Add EC2 Resource Configuration
 
 Open `main.tf` and add the following EC2 configuration (purposely not written in HCL canonical style).
@@ -106,11 +108,13 @@ Format your configuration to rewrite it to follow HCL style:
 ```bash
 terraform fmt
 ```
+![alt text](image-8.png)
 
 Validate the syntax:
 ```bash
 terraform validate
 ```
+![alt text](image-9.png)
 
 ### 5. Review the Plan
 
@@ -123,6 +127,9 @@ The plan output will show that Terraform intends to create a new EC2 instance wi
 - A dynamically selected Amazon Linux 2 AMI
 - Instance type `t3.micro` (Free Tier eligible in many accounts/regions)
 - Three tags: Name, Environment, and Managed_By
+
+
+![alt text](image-10.png)
 
 ### 6. Apply the Configuration
 
@@ -188,6 +195,7 @@ Apply the configuration to update the EC2 instance tags:
 ```bash
 terraform apply
 ```
+![alt text](image-11.png)
 
 Review the proposed changes and type `yes` when prompted to confirm.
 
@@ -240,6 +248,8 @@ Apply the configuration to apply the latest EC2 tag updates:
 ```bash
 terraform apply
 ```
+![alt text](image-12.png)
+![alt text](image-13.png)
 
 Review the proposed changes and type `yes` when prompted to confirm.
 
